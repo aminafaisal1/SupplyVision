@@ -1,4 +1,4 @@
-/* Global Reset & Base Styles */
+/* Reset + Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,34 +6,37 @@
 }
 
 body, html {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  background-color: #fafafa;
-  color: #1e1e1e;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
+  color: #2b59ff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+a:hover {
+  color: #1a3ecc;
 }
 
 .container {
   width: 90%;
   max-width: 960px;
-  margin: auto;
-  padding: 60px 0;
+  margin: 0 auto;
 }
 
 /* Header */
 header {
+  background: #fff;
   padding: 24px 0;
-  background-color: white;
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
 header .container {
@@ -43,151 +46,102 @@ header .container {
 }
 
 header h1 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 24px;
   font-size: 16px;
   color: #444;
 }
 
-nav a:hover {
-  color: #111;
-}
-
-/* Hero */
+/* Hero Section */
 #hero {
-  background: #f4f6ff;
-  padding: 100px 20px;
+  background: #f7f9fb;
   text-align: center;
+  padding: 100px 20px 80px 20px;
 }
 
 #hero h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 42px;
   font-weight: 700;
-  color: #2b2b2b;
+  margin-bottom: 20px;
 }
 
 #hero p {
   font-size: 20px;
+  color: #444;
   max-width: 600px;
-  margin: 0 auto 30px auto;
-  color: #555;
+  margin: 0 auto 32px;
 }
 
 .btn {
   display: inline-block;
+  background: #ffd750;
+  color: #111;
   padding: 14px 28px;
-  background-color: #ffce47;
-  color: black;
+  font-size: 16px;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.25s ease;
 }
-
 .btn:hover {
-  background-color: #e6b800;
-  transform: translateY(-1px);
+  background: #f5c400;
 }
 
-/* Step Sections */
-#how-it-works {
-  background: white;
+/* Visual Sections */
+section {
+  padding: 80px 0;
 }
 
-#how-it-works h2 {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.step {
-  margin-bottom: 40px;
+.feature-block {
   background: #fff;
-  padding: 30px;
+  border: 1px solid #eee;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  text-align: left;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  text-align: center;
 }
 
-.step h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
+.feature-block h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: #1a1a1a;
 }
 
-.step p {
+.feature-block p {
+  font-size: 18px;
   color: #555;
-  font-size: 16px;
 }
 
-.step .note {
-  margin-top: 10px;
-  font-style: italic;
-  color: #888;
-}
-
-/* Pricing Section */
+/* Pricing */
 #pricing {
-  background-color: #f0f4f8;
+  background: #fef8e7;
   text-align: center;
 }
 
 #pricing h2 {
-  font-size: 26px;
-  margin-bottom: 16px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 #pricing p {
   font-size: 18px;
-  max-width: 640px;
-  margin: 0 auto 16px;
+  margin-bottom: 16px;
 }
 
-/* Call to Action */
-#join {
-  background: white;
+/* Contact */
+#contact {
   text-align: center;
-}
-
-#join h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-#join p {
-  font-size: 18px;
-  margin-bottom: 30px;
 }
 
 /* Footer */
 footer {
   background: #111;
   color: #aaa;
+  font-size: 14px;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  #hero h1 {
-    font-size: 32px;
-  }
-
-  .step {
-    padding: 20px;
-  }
 }
